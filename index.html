@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Lens</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #fafaf0;
+        }
+        h1 {
+            text-align: center;
+        }
+        label.upload {
+            display: block;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        .inner {
+            margin: 20px 10px;
+        }
+        .controls {
+            margin: 10px 0;
+        }
+        .imageWrapper {
+            margin-top: 50px;
+            position: relative;
+        }
+        .prop img {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="inner">
+    <h1>Face Lens</h1>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <label class="upload" for="fileToUpload">Upload an Image</label>
+        <input type="file" name="fileToUpload" id="fileToUpload" />
+        <label class="upload">Lenses</label>
+        <div class="controls">
+            <label for="dogInput">
+                <input id="dogInput" type="radio" name="filter" value="dog" checked />
+                Dog
+            </label>
+            <label for="dalmatianInput">
+                <input id="dalmatianInput" type="radio" name="filter" value="dalmatian" />
+                Dalmatian
+            </label>
+            <label for="catInput">
+                <input id="catInput" type="radio" name="filter" value="cat" />
+                Cat
+            </label>
+            <label for="bunnyInput">
+                <input id="bunnyInput" type="radio" name="filter" value="bunny" />
+                Bunny
+            </label>
+            <label for="devilInput">
+                <input id="devilInput" type="radio" name="filter" value="devil" />
+                Devil
+            </label>
+        </div>
+        <div class="imageWrapper">
+            <img id="image" class="image" src="" alt="" />
+        </div>
+    </form>
+</div>
+<template id="dog" data-ear-height="134" data-ear-width="160" data-nose-height="86" data-nose-width="148" data-nose-correction="0">
+    <div class="prop dog">
+        <img class="dog ear-right" src="assets/img/dog/dog-right-ear.png" alt=""/>
+        <img class="dog ear-left" src="assets/img/dog/dog-left-ear.png" alt=""/>
+        <img class="dog nose" src="assets/img/dog/dog-nose.png" alt=""/>
+    </div>
+</template>
+<template id="dalmatian" data-ear-height="114" data-ear-width="136" data-nose-height="73" data-nose-width="108" data-nose-correction="0">
+    <div class="prop dalmatian">
+        <img class="dalmatian ear-right" src="assets/img/dalmatian/dalmatian-right-ear.png" alt=""/>
+        <img class="dalmatian ear-left" src="assets/img/dalmatian/dalmatian-left-ear.png" alt=""/>
+        <img class="dalmatian nose" src="assets/img/dalmatian/dalmatian-nose.png" alt=""/>
+    </div>
+</template>
+<template id="cat" data-ear-height="141" data-ear-width="124" data-nose-height="194" data-nose-width="497" data-nose-correction="25">
+    <div class="prop cat">
+        <img class="cat ear-right" src="assets/img/cat/cat-right-ear.png" alt=""/>
+        <img class="cat ear-left" src="assets/img/cat/cat-left-ear.png" alt=""/>
+        <img class="cat nose" src="assets/img/cat/cat-nose.png" alt=""/>
+    </div>
+</template>
+<template id="bunny" data-ear-height="289" data-ear-width="163" data-nose-height="118" data-nose-width="109" data-nose-correction="0">
+    <div class="prop bunny">
+        <img class="bunny ear-right" src="assets/img/bunny/bunny-right-ear.png" alt=""/>
+        <img class="bunny ear-left" src="assets/img/bunny/bunny-left-ear.png" alt=""/>
+        <img class="bunny nose" src="assets/img/bunny/bunny-nose.png" alt=""/>
+    </div>
+</template>
+<template id="devil" data-ear-height="189" data-ear-width="116" data-eye-height="50" data-eye-width="84" data-eye-correction="0">
+    <div class="prop devil">
+        <img class="devil ear-right" src="assets/img/devil/devil-right-ear.png" alt=""/>
+        <img class="devil ear-left" src="assets/img/devil/devil-left-ear.png" alt=""/>
+        <img class="devil eye-right" src="assets/img/devil/devil-right-eye.png" alt=""/>
+        <img class="devil eye-left" src="assets/img/devil/devil-left-eye.png" alt=""/>
+    </div>
+</template>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="assets/js/faceLens.js"></script>
+<script>
+    $(document).ready(function () {
+        FACELENS.init();
+    });
+</script>
+</body>
+</html>
