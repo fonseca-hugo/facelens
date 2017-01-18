@@ -14,7 +14,7 @@ Features
 
 FaceLens allows to upload an image and then apply a lens on the detected faces.
 
-*\*This is not a Standalone library or a Plugin, it's a working proof of concept.
+*\*This is not a Standalone library or a Plugin, it's a working proof of concept.*
 
 
 Usage
